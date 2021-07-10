@@ -5,16 +5,12 @@ import Movie from "./components/Movie";
 import Swipeable from "./components/Swipeable";
 import ReactPlayer from "react-player";
 
-/* function addVideoModal() {
-	let testData = document.getElementById("video-modal");
-  
-} */
-
 function App() {
 	const [movies, setMovies] = useState([]);
 	const [status, setStatus] = useState("1");
 	const [searchTerm, setSearchTerm] = useState("");
 	const [Playback, setPlayback] = useState(false);
+	const [fetchUrl, setFetchUrl] = useState("");
 
 	useEffect(() => {
 		let url = "https://jikan1.p.rapidapi.com/genre/anime/" + status + "/1";
@@ -32,6 +28,19 @@ function App() {
 
 	function handleSubmit(e) {
 		e.preventDefault();
+	}
+
+	function findAnimeTrailer(name) {
+		let safeText = name;
+		let apiKey = "YOUR API KEY HERE";
+		console.log(safeText);
+		fetch(
+			`https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}=${safeText}trailer`
+		)
+			.then((res) => res.json())
+			.then((data) => {
+				setFetchUrl(`https://www.youtube.com/watch?v=${data.items[0].id.videoId}`);
+			});
 	}
 
 	function searchMovie() {
@@ -75,10 +84,11 @@ function App() {
 				</form>
 			</header>
 
-			{Playback?(
+			{Playback ? (
 				<div id="video-modal" className="video-modal">
 					<>
-					<ReactPlayer url="https://www.youtube.com/watch?v=kDaC3RNurvA" />
+						<ReactPlayer url={fetchUrl} />
+
 						<button
 							onClick={() => {
 								setPlayback(false);
@@ -87,8 +97,8 @@ function App() {
 							Close
 						</button>
 					</>
-			</div>
-			):null}
+				</div>
+			) : null}
 
 			<div className="movie-container">
 				{movies &&
@@ -100,6 +110,7 @@ function App() {
 							vote_average={movie.score}
 							overview={movie.synopsis}
 							setPlayback={setPlayback}
+							findAnimeTrailer={findAnimeTrailer}
 						/>
 					))}
 			</div>
