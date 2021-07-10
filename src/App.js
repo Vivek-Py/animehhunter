@@ -134,6 +134,7 @@ function App() {
 							vote_average={movie.score}
 							overview={movie.synopsis}
 							setPlayback={setPlayback}
+							setLoading={setLoading}
 							findAnimeTrailer={findAnimeTrailer}
 						/>
 					))
