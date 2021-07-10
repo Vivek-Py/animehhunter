@@ -1,16 +1,61 @@
-# Movie Review (Anime-TV Specific)
+<p align="center">
+<img src="./img/logo.png">
+</p>
 
-This app lets you search for the top anime from every genre available in the web-app. It also provides user with the score of the anime. Here's the image of the web-app.
+# :pushpin: Anime Hunter
+
+The app lets you search for the top anime from every genre available in the web-app. It also provides user with the score of the anime.
 
 <p align="center">
 <img src="./img/home.jpg" width="600">
 </p>
 
-## Available Scripts
+Live demo: [Anime Hunter](https://animehhunter.vercel.app/)
+
+## :pushpin: Setup Development Envionment
+
+**Step 1.** Fork the repo
+
+**Step 2.** Clone the repo using
+
+      $ git clone <your_forked_repo_link>
+
+**Step3.** Navigate to project folder
+
+      $ cd animehhunter
+
+**Step 4.** Run the following command in terminal
+
+      $ npm install
+
+
+## :scroll: Contribution Guidelines
+
+**Step 1.** Make a new branch related to your work/issue
+
+      $ git checkout -b <your_branch_name>
+
+**Step 2.** Make your changes & commit it with a suitable small message
+
+      $ git add . && git commit -m"your_message"
+
+**Step 3.** Add upstream to repo
+
+      $ git remote add upstream https://github.com/Vivek-Py/animehhunter.git
+
+**Step 4.** Update your local repo with main repo
+
+      $ git fetch upstream && git merge upstream/main
+
+**Step 5.** Push your code to your forked repo & make a Pull Request from GitHub
+
+      $ git push origin <your_changes_containing_branch_name>
+
+## :scroll: Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+      $ npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -18,12 +63,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+      $ npm test
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+      $ npm run build
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -33,7 +78,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+      $ npm run eject
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -42,3 +87,19 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## :pushpin: Our Team
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/Vivek-Py/animehhunter/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=Vivek-Py/animehhunter
+" />
+      </a>
+     </td>
+  </tr>
+</table>
+
+_This project is upgraded under MLH Hacktoon 2022 season_
+
