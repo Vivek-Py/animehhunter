@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import SearchIcon from "@material-ui/icons/Search";
 import Movie from "./components/Movie";
 import Swipeable from "./components/Swipeable";
 import ReactPlayer from "react-player";
 import DotLoader from "react-spinners/DotLoader";
 
+import "./App.css";
+import logo from "./logo-ah.png";
 const style = { position: "fixed", top: "50%", left: "50%" };
+
 function App() {
 	const [movies, setMovies] = useState([]);
 	const [status, setStatus] = useState("1");
@@ -68,15 +70,19 @@ function App() {
 	return (
 		<div className="root-container">
 			<header>
-				<Swipeable setStatus={setStatus} />
+				<div className="genre-menu">
+					<Swipeable setStatus={setStatus} />
+				</div>
+
 				<navbrand
 					className="appName"
 					onClick={() => {
 						setStatus("1");
 					}}
 				>
-					aNIME hUNTER
+					<img src={logo} height="170" width="170" alt="" srcset="" />
 				</navbrand>
+
 				<form className="search-form" onSubmit={handleSubmit}>
 					<input
 						type="search"
