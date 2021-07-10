@@ -10,7 +10,7 @@ The app lets you search for the top anime from every genre available in the web-
 <img src="./img/home.jpg" width="600">
 </p>
 
-Live demo: [Anime Hunter](https://animehhunter.vercel.app/)
+Live demo: [Anime Hunter](https://www.animehunter.tech/)
 
 ## :pushpin: Setup Development Envionment
 
