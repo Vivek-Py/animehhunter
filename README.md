@@ -6,7 +6,7 @@ This app lets you search for the top anime from every genre available in the web
 <img src="./img/home.jpg" width="600">
 </p>
 
-##Requirements
+## Requirements
 
 The web-app uses two npm-packages. To install them run the following commands:
 
