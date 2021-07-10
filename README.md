@@ -92,7 +92,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## :pushpin: Our Team
 
     
-[![contri-image](https://contrib.rocks/image?repo=Vivek-Py/animehhunter)](https://github.com/Vivek-Py/animehhunter/graphs/contributors)
+<a href="https://github.com/vivek-py/animehhunter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vivek-py/animehhunter" />
+</a>
       
 
 
