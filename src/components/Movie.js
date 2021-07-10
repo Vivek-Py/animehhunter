@@ -8,7 +8,6 @@ const Movie = (props) => {
 		overview,
 		setPlayback,
 		findAnimeTrailer,
-		setLoading,
 	} = props;
 
 	function setVoteColor(vote) {
@@ -33,10 +32,8 @@ const Movie = (props) => {
 				<button
 					className="trailer"
 					onClick={() => {
-						setLoading(true)
 						findAnimeTrailer(title);
 						console.log(title);
-						setLoading(false);
 						setPlayback(true);
 					}}
 				>
