@@ -4,7 +4,7 @@
 
 # :pushpin: Anime Hunter
 
-The app lets you search for the top anime from every genre available in the web-app. It also provides user with the score of the anime.
+The app lets you search for the top anime from every genre available in the web-app. It also provides user with the rating of the anime.
 
 <p align="center">
 <img src="./img/home.jpg" width="600">
