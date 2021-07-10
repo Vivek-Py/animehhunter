@@ -80,10 +80,10 @@ function App() {
 				</form>
 			</header>
 
-			<div id="video-modal" className="video-modal">
-				{Playback === true ? (
+			{Playback?(
+				<div id="video-modal" className="video-modal">
 					<>
-						<ReactPlayer url="https://www.youtube.com/watch?v=kDaC3RNurvA" />
+					<ReactPlayer url="https://www.youtube.com/watch?v=kDaC3RNurvA" />
 						<button
 							onClick={() => {
 								setPlayback(false);
@@ -92,10 +92,8 @@ function App() {
 							Close
 						</button>
 					</>
-				) : (
-					""
-				)}
 			</div>
+			):null}
 
 			<div className="movie-container">
 				{
