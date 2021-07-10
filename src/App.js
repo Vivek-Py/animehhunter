@@ -4,19 +4,23 @@ import SearchIcon from "@material-ui/icons/Search";
 import Movie from "./components/Movie";
 import Swipeable from "./components/Swipeable";
 import ReactPlayer from "react-player";
+import DotLoader from "react-spinners/DotLoader";
 
 /* function addVideoModal() {
 	let testData = document.getElementById("video-modal");
   
 } */
-
+const style = { position: "fixed", top: "50%", left: "50%" };
 function App() {
 	const [movies, setMovies] = useState([]);
 	const [status, setStatus] = useState("1");
 	const [searchTerm, setSearchTerm] = useState("");
 	const [Playback, setPlayback] = useState(false);
+	const [loading, setLoading] = useState(false);
+	
 
 	useEffect(() => {
+		setLoading(true)
 		let url = "https://jikan1.p.rapidapi.com/genre/anime/" + status + "/1";
 		console.log(url);
 		fetch(url, {
@@ -27,7 +31,8 @@ function App() {
 			},
 		})
 			.then((response) => response.json())
-			.then((data) => setMovies(data.anime));
+			.then((data) => {setMovies(data.anime); setLoading(false)
+			});
 	}, [status]);
 
 	function handleSubmit(e) {
@@ -75,10 +80,10 @@ function App() {
 				</form>
 			</header>
 
-			{Playback?(
-				<div id="video-modal" className="video-modal">
+			<div id="video-modal" className="video-modal">
+				{Playback === true ? (
 					<>
-					<ReactPlayer url="https://www.youtube.com/watch?v=kDaC3RNurvA" />
+						<ReactPlayer url="https://www.youtube.com/watch?v=kDaC3RNurvA" />
 						<button
 							onClick={() => {
 								setPlayback(false);
@@ -87,17 +92,20 @@ function App() {
 							Close
 						</button>
 					</>
+				) : (
+					""
+				)}
 			</div>
-			):null}
 
 			<div className="movie-container">
-				{movies &&
+				{
+				loading ? <div style={style}> <DotLoader className="loader" color={"#1CE7BF"} loading={loading} size={150} /> </div>:movies &&
 					movies.map((movie) => (
 						<Movie
 							key={movie.rank}
 							title={movie.title}
 							poster_path={movie.image_url}
-							vote_average={movie.score}
+							vote_average={movie.score} 
 							overview={movie.synopsis}
 							setPlayback={setPlayback}
 						/>
