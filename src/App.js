@@ -40,6 +40,7 @@ function App() {
 	}
 
 	function findAnimeTrailer(name) {
+		setLoading(true)
 		let safeText = name;
 		let apiKey = process.env.REACT_APP_GAPI;
 		console.log(safeText);
@@ -49,6 +50,7 @@ function App() {
 			.then((res) => res.json())
 			.then((data) => {
 				setFetchUrl(`https://www.youtube.com/watch?v=${data.items[0].id.videoId}`);
+				setLoading(false)
 			});
 	}
 
@@ -97,10 +99,20 @@ function App() {
 				</form>
 			</header>
 
-			{Playback ? (
+			{Playback ? loading ? (
+					<div style={style}>
+						{" "}
+						<DotLoader
+							className="loader"
+							color={"#1CE7BF"}
+							loading={loading}
+							size={150}
+						/>{" "}
+					</div>
+				) : (
 				<div id="video-modal" className="video-modal">
-					<>
-						<ReactPlayer url={fetchUrl} />
+					<>						
+					<ReactPlayer url={fetchUrl} />
 
 						<button
 							onClick={() => {
@@ -108,7 +120,7 @@ function App() {
 							}}
 						>
 							Close
-						</button>
+						</button>			
 					</>
 				</div>
 			) : null}
