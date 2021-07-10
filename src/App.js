@@ -4,15 +4,19 @@ import SearchIcon from "@material-ui/icons/Search";
 import Movie from "./components/Movie";
 import Swipeable from "./components/Swipeable";
 import ReactPlayer from "react-player";
+import DotLoader from "react-spinners/DotLoader";
 
+const style = { position: "fixed", top: "50%", left: "50%" };
 function App() {
 	const [movies, setMovies] = useState([]);
 	const [status, setStatus] = useState("1");
 	const [searchTerm, setSearchTerm] = useState("");
 	const [Playback, setPlayback] = useState(false);
 	const [fetchUrl, setFetchUrl] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
+		setLoading(true);
 		let url = "https://jikan1.p.rapidapi.com/genre/anime/" + status + "/1";
 		console.log(url);
 		fetch(url, {
@@ -23,7 +27,10 @@ function App() {
 			},
 		})
 			.then((response) => response.json())
-			.then((data) => setMovies(data.anime));
+			.then((data) => {
+				setMovies(data.anime);
+				setLoading(false);
+			});
 	}, [status]);
 
 	function handleSubmit(e) {
@@ -35,7 +42,7 @@ function App() {
 		let apiKey = "YOUR API KEY HERE";
 		console.log(safeText);
 		fetch(
-			`https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}=${safeText}trailer`
+			`https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}&q=${safeText}trailer`
 		)
 			.then((res) => res.json())
 			.then((data) => {
@@ -101,7 +108,18 @@ function App() {
 			) : null}
 
 			<div className="movie-container">
-				{movies &&
+				{loading ? (
+					<div style={style}>
+						{" "}
+						<DotLoader
+							className="loader"
+							color={"#1CE7BF"}
+							loading={loading}
+							size={150}
+						/>{" "}
+					</div>
+				) : (
+					movies &&
 					movies.map((movie) => (
 						<Movie
 							key={movie.rank}
@@ -112,7 +130,8 @@ function App() {
 							setPlayback={setPlayback}
 							findAnimeTrailer={findAnimeTrailer}
 						/>
-					))}
+					))
+				)}
 			</div>
 		</div>
 	);
