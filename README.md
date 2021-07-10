@@ -91,16 +91,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## :pushpin: Our Team
 
-<table>
-  <tr>
-    <td>
       <a href="https://github.com/Vivek-Py/animehhunter/graphs/contributors">
-        <img src="https://contrib.rocks/image?repo=Vivek-Py/animehhunter
-" />
+        <img src="https://contrib.rocks/image?repo=Vivek-Py/animehhunter" />
       </a>
-     </td>
-  </tr>
-</table>
 
 _This project is upgraded under MLH Hacktoon 2022 season_
 
