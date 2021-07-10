@@ -28,8 +28,9 @@ Live demo: [Anime Hunter](https://animehhunter.vercel.app/)
 
       $ npm install
 
-
 ## :scroll: Contribution Guidelines
+
+Remember to follow our [Code Of Conduct](https://github.com/Vivek-Py/animehhunter/blob/main/CODE_OF_CONDUCT.md)
 
 **Step 1.** Make a new branch related to your work/issue
 
@@ -103,3 +104,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 _This project is upgraded under MLH Hacktoon 2022 season_
 
+## License
+
+[MIT License](https://github.com/Vivek-Py/animehhunter/blob/main/LICENSE.md)

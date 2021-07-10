@@ -1,7 +1,14 @@
 import React from "react";
 
 const Movie = (props) => {
-	const { title, poster_path, vote_average, overview, setPlayback } = props;
+	const {
+		title,
+		poster_path,
+		vote_average,
+		overview,
+		setPlayback,
+		findAnimeTrailer,
+	} = props;
 
 	function setVoteColor(vote) {
 		if (vote >= 8) {
@@ -23,7 +30,10 @@ const Movie = (props) => {
 			<div className="movie-overview">
 				<h2>Overview: </h2>
 				<button
+					className="trailer"
 					onClick={() => {
+						findAnimeTrailer(title);
+						console.log(title);
 						setPlayback(true);
 					}}
 				>

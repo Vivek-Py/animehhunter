@@ -22,15 +22,24 @@ header {
 	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
+	max-height: 100px;
+}
+
+.genre-menu {
+	margin: auto 0;
 }
 
 .appName {
-	margin-top: 8px;
+	margin-top: -25px;
 	font-family: "Audiowide", cursive;
 }
 
 .appName:hover {
 	cursor: pointer;
+}
+
+.search-form {
+	margin: auto 0;
 }
 
 .search {
@@ -58,6 +67,7 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	margin-top: 50px;
 }
 
 .movie {
@@ -138,7 +148,22 @@ header {
 	position: fixed;
 	top: 50%;
 	left: 50%;
+
 	transform: translate(-50%, -50%);
 	z-index: 1;
 	border: 8px solid white;
+}
+
+.trailer {
+	background-color: #373b69c0;
+	border-radius: 8px;
+	padding: 8px;
+	color: white;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@media only screen and (max-width: 720px) {
+	.appName > img {
+		display: none;
+	}
 }
