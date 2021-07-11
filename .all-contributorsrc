@@ -1,0 +1,35 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Innanov",
+      "name": "INNAN Nouhaila",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64653897?v=4",
+      "profile": "https://github.com/Innanov",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "Rishabhraghwendra18",
+      "name": "Rishabhraghwendra18",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43534227?v=4",
+      "profile": "https://www.linkedin.com/in/rishabh-sde/",
+      "contributions": [
+        "doc",
+        "code",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "animehhunter",
+  "projectOwner": "Vivek-Py",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
