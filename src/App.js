@@ -60,7 +60,7 @@ function App() {
 			}); */
 
 		fetch(
-			`https://youtube-v31.p.rapidapi.com/search?q=${safeText}&part=snippet%2Cid&regionCode=US`,
+			`https://youtube-v31.p.rapidapi.com/search?q=${safeText}trailer&part=snippet%2Cid&regionCode=US`,
 			{
 				method: "GET",
 				headers: {
