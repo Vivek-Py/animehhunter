@@ -33,6 +33,9 @@ function App() {
 			.then((data) => {
 				setMovies(data.anime);
 				setLoading(false);
+			})
+			.catch((err) => {
+				console.error(err);
 			});
 	}, [status]);
 
@@ -43,15 +46,36 @@ function App() {
 	function findAnimeTrailer(name) {
 		setLoading(true);
 		let safeText = name;
-		let apiKey = process.env.REACT_APP_GAPI;
-		console.log(safeText);
-		fetch(
+
+		// REPLACING THE CURRENT API BECAUSE OF HARD LIMITS
+
+		/* let apiKey = process.env.REACT_APP_GAPI; */
+		/* fetch(
 			`https://www.googleapis.com/youtube/v3/search/?part=snippet&key=${apiKey}&q=${safeText}trailer`
 		)
 			.then((res) => res.json())
 			.then((data) => {
 				setFetchUrl(`https://www.youtube.com/watch?v=${data.items[0].id.videoId}`);
 				setLoading(false);
+			}); */
+
+		fetch(
+			`https://youtube-v31.p.rapidapi.com/search?q=${safeText}&part=snippet%2Cid&regionCode=US`,
+			{
+				method: "GET",
+				headers: {
+					"x-rapidapi-key": process.env.REACT_APP_YT_KEY,
+					"x-rapidapi-host": process.env.REACT_APP_YT_HOST,
+				},
+			}
+		)
+			.then((res) => res.json())
+			.then((data) => {
+				setFetchUrl(`https://www.youtube.com/watch?v=${data.items[0].id.videoId}`);
+				setLoading(false);
+			})
+			.catch((err) => {
+				console.error(err);
 			});
 	}
 
@@ -65,7 +89,10 @@ function App() {
 			},
 		})
 			.then((response) => response.json())
-			.then((data) => setMovies(data.results));
+			.then((data) => setMovies(data.results))
+			.catch((err) => {
+				console.error(err);
+			});
 
 		setSearchTerm("");
 	}

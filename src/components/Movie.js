@@ -33,7 +33,7 @@ const Movie = (props) => {
 					className="trailer"
 					onClick={() => {
 						findAnimeTrailer(title);
-						console.log(title);
+
 						setPlayback(true);
 					}}
 				>
