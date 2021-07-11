@@ -1,6 +1,6 @@
 <p align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img src="./img/logo.png">
 </p>
@@ -115,11 +115,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Innanov"><img src="https://avatars.githubusercontent.com/u/64653897?v=4?s=100" width="100px;" alt=""/><br /><sub><b>INNAN Nouhaila</b></sub></a><br /><a href="#design-Innanov" title="Design">🎨</a></td>
-
-    <td align="center"><a href="https://github.com/Prastab"><img src="https://avatars.githubusercontent.com/u/67535533?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Prastab</b></sub></a><br /><a href="https://github.com/Vivek-Py/animehhunter/commits?author=Prastab" title="Documentation">📖</a> <a href="#plugin-Prastab" title="Plugin/utility libraries">🔌</a></td>
-
+    <td align="center"><a href="https://github.com/Prastab"><img src="https://avatars.githubusercontent.com/u/67535533?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Prastab</b></sub></a><br /><a href="https://github.com/Vivek-Py/animehhunter/commits?author=Prastab" title="Documentation">📖</a> <a href="#plugin-Prastab" title="Plugin/utility libraries">🔌</a> <a href="https://github.com/Vivek-Py/animehhunter/commits?author=Prastab" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/rishabh-sde/"><img src="https://avatars.githubusercontent.com/u/43534227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rishabhraghwendra18</b></sub></a><br /><a href="https://github.com/Vivek-Py/animehhunter/commits?author=Rishabhraghwendra18" title="Documentation">📖</a></td>
-
   </tr>
 </table>
 
