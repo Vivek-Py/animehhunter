@@ -31,6 +31,7 @@ header {
 
 .appName {
 	margin-top: -25px;
+	margin-left: 180px;
 	font-family: "Audiowide", cursive;
 }
 
@@ -148,6 +149,12 @@ header {
 	position: fixed;
 	top: 50%;
 	left: 50%;
+
+	background-color: #e6e7e9;
+	background-image: url("loader.gif");
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
 
 	transform: translate(-50%, -50%);
 	z-index: 1;

@@ -4,6 +4,7 @@ import Movie from "./components/Movie";
 import Swipeable from "./components/Swipeable";
 import ReactPlayer from "react-player";
 import DotLoader from "react-spinners/DotLoader";
+import { motion } from "framer-motion";
 
 import "./App.css";
 import logo from "./logo-ah.png";
@@ -40,7 +41,7 @@ function App() {
 	}
 
 	function findAnimeTrailer(name) {
-		setLoading(true)
+		setLoading(true);
 		let safeText = name;
 		let apiKey = process.env.REACT_APP_GAPI;
 		console.log(safeText);
@@ -50,7 +51,7 @@ function App() {
 			.then((res) => res.json())
 			.then((data) => {
 				setFetchUrl(`https://www.youtube.com/watch?v=${data.items[0].id.videoId}`);
-				setLoading(false)
+				setLoading(false);
 			});
 	}
 
@@ -99,30 +100,22 @@ function App() {
 				</form>
 			</header>
 
-			{Playback ? loading ? (
-					<div style={style}>
-						{" "}
-						<DotLoader
-							className="loader"
-							color={"#1CE7BF"}
-							loading={loading}
-							size={150}
-						/>{" "}
-					</div>
-				) : (
-				<div id="video-modal" className="video-modal">
-					<>						
+			{Playback ? (
+				<motion.div
+					transition={{ ease: "easeOut", duration: 2 }}
+					id="video-modal"
+					className="video-modal"
+				>
 					<ReactPlayer url={fetchUrl} />
 
-						<button
-							onClick={() => {
-								setPlayback(false);
-							}}
-						>
-							Close
-						</button>			
-					</>
-				</div>
+					<button
+						onClick={() => {
+							setPlayback(false);
+						}}
+					>
+						Close
+					</button>
+				</motion.div>
 			) : null}
 
 			<div className="movie-container">
