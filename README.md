@@ -89,6 +89,15 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## :star: Contributors
+
+<a href="https://github.com/Vivek-Py/animehhunter/graphs/contributors">
+  <img src="https://github.com/Vivek-Py.png?size=50">
+  <img src="https://github.com/Rishabhraghwendra18.png?size=50">
+  <img src="https://github.com/Innanov.png?size=50">
+  <img width="50" height="50" src="https://github.com/Prastab.png?size=50">
+</a>
+
 _This project is upgraded under MLH Hacktoon 2022 season_
 
 ## License
