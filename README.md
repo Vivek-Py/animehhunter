@@ -107,7 +107,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Innanov"><img src="https://avatars.githubusercontent.com/u/64653897?v=4?s=100" width="100px;" alt=""/><br /><sub><b>INNAN Nouhaila</b></sub></a><br /><a href="#design-Innanov" title="Design">🎨</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/rishabh-sde/"><img src="https://avatars.githubusercontent.com/u/43534227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rishabhraghwendra18</b></sub></a><br /><a href="https://github.com/Vivek-Py/animehhunter/commits?author=Rishabhraghwendra18" title="Documentation">📖</a> <a href="https://github.com/Vivek-Py/animehhunter/commits?author=Rishabhraghwendra18" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/rishabh-sde/"><img src="https://avatars.githubusercontent.com/u/43534227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rishabhraghwendra18</b></sub></a><br /><a href="https://github.com/Vivek-Py/animehhunter/commits?author=Rishabhraghwendra18" title="Documentation">📖</a> <a href="https://github.com/Vivek-Py/animehhunter/commits?author=Rishabhraghwendra18" title="Code">💻</a> <a href="https://github.com/Vivek-Py/animehhunter/commits?author=Rishabhraghwendra18" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
